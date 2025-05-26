@@ -14,7 +14,7 @@ markup = InlineKeyboardMarkup(keyboard)
 async def random_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
 
-    with open("../resources/img.png", "rb") as photo:
+    with open("../resources/image.png", "rb") as photo:
         await context.bot.send_photo(chat_id=chat_id, photo=photo)
 
     fact = await ask_gpt(PROMPT)
