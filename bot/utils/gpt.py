@@ -20,5 +20,6 @@ async def ask_gpt(prompt: str) -> str:
         logger.info(f"Received response: {response.choices[0].message.content.strip()}")
         return response.choices[0].message.content.strip()
     except Exception as e:
+        logger.error(f"GPT error: {e}")
         return f"Error accessing ChatGPT: {e}"
 
